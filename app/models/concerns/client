@@ -1,0 +1,12 @@
+client ID 5028a37bdafe4a0f874425c95c254449
+client secret 43d6443b9ae1416db42ad7b04515adef
+
+access_token=3117915693.5028a37.35ba15500d9a4ec6b6f2eaf54f8e5e84
+
+https://api.instagram.com/v1/tags/nofilter/media/recent?access_token=3117915693.5028a37.35ba15500d9a4ec6b6f2eaf54f8e5e84
+
+https://api.instagram.com/v1/locations/{location-id}/media/recent?access_token=3117915693.5028a37.35ba15500d9a4ec6b6f2eaf54f8e5e84
+
+218588899
+
+https://api.instagram.com/v1/locations/218588899/media/recent?access_token=3117915693.5028a37.35ba15500d9a4ec6b6f2eaf54f8e5e84
