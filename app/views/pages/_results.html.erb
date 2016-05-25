@@ -6,11 +6,14 @@
       </div>  
         <div class="panel-body">
           <% posts[0]['trends'].each do |post| %>
-            <%= post['name'] %><br>
+            <%= link_to post['name'], search_tweets_pages_path(query: post['query']), method: :post, remote: true %><br>
           <% end %><br>
         </div>  
     </div>        
   </div>
+
+  <div id="tweets">
+
 </div>
 
 

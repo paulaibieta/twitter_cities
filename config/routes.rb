@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resource :pages
+  resource :pages do 
+    member do
+      post 'search_tweets'
+    end 
+  end 
 
   root "pages#index"
 

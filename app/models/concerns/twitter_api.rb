@@ -11,4 +11,9 @@ class TwitterApi
     cities_correct[city]
   end
 
+  def self.search_response query
+    json_data = HTTParty.get("https://api.twitter.com/1.1/search/tweets.json?q=#{query}",
+      {:headers => {'Authorization' => 'Bearer AAAAAAAAAAAAAAAAAAAAAJ9SvAAAAAAAPYENC63ApJKXKZYtKNSL7NGQanU%3DdzBEgg4bcFlqPQk5h7alzEbDNDO7yft6F64uVEJwC4Zvosye6U'}})
+  end 
+
 end 

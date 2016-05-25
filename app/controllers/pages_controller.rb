@@ -8,4 +8,9 @@ class PagesController < ApplicationController
     @city = params[:city]
   end 
 
+  def search_tweets
+    @tweets = TwitterApi.search_response params[:query]
+    @query = params[:query]
+  end 
+
 end
