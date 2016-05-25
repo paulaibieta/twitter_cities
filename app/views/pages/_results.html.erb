@@ -2,11 +2,12 @@
   <div class="col-md-6">
     <div class="panel panel-info">
       <div class="panel-heading">
-        <h3 class="panel-title">Trending Topics in <%= city.titleize %></h3>
+        <h3 class="panel-title">Top 50 Topics in <%= city.titleize %></h3>
       </div>  
         <div class="panel-body">
-          <% posts[0]['trends'].each do |post| %>
-            <%= link_to post['name'], search_tweets_pages_path(query: post['query']), method: :post, remote: true %><br>
+          <% posts[0]['trends'].each_with_index do |post, index| %>
+            <% indexplusone = index + 1 %>
+            <%= "#{indexplusone}" %>. <%= link_to post['name'], search_tweets_pages_path(query: post['query']), method: :post, remote: true %><br>
           <% end %><br>
         </div>  
     </div>        
