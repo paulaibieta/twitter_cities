@@ -2,6 +2,7 @@
   <div class="jumbotron">
     <h1>Urban Tweets</h1>
     <p>Select your favorite city to see the latest tweets</p>
+    
     <%= link_to "Phoenix", pages_path(city: 'phoenix'), method: :post, remote: true, class: "btn btn-primary" %>
     <%= link_to "New York", pages_path(city: 'new york'), method: :post, remote: true, class: "btn btn-primary" %>
     <%= link_to "Los Angeles", pages_path(city: 'los angeles'), method: :post, remote: true, class: "btn btn-primary" %>
