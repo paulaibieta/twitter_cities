@@ -3,18 +3,39 @@
     <h1>Urban Tweets</h1>
     <p>Select your city to see the most popular Twitter trends in your area</p>
     
-    <%= link_to "Phoenix", pages_path(city: 'phoenix'), method: :post, remote: true, class: "btn btn-primary" %>
-    <%= link_to "New York", pages_path(city: 'new york'), method: :post, remote: true, class: "btn btn-primary" %>
-    <%= link_to "Los Angeles", pages_path(city: 'los angeles'), method: :post, remote: true, class: "btn btn-primary" %>
-    <%= link_to "Chicago", pages_path(city: 'chicago'), method: :post, remote: true, class: "btn btn-primary" %>
-    <%= link_to "San Francisco", pages_path(city: 'san francisco'), method: :post, remote: true, class: "btn btn-primary" %>
-    <%= link_to "Austin", pages_path(city: 'austin'), method: :post, remote: true, class: "btn btn-primary" %>
-    <%= link_to "Boston", pages_path(city: 'boston'), method: :post, remote: true, class: "btn btn-primary" %>  
-    <%= link_to "Seattle", pages_path(city: 'seattle'), method: :post, remote: true, class: "btn btn-primary" %>   
-    <%= link_to "Portland", pages_path(city: 'portland'), method: :post, remote: true, class: "btn btn-primary" %>  
-    <%= link_to "Miami", pages_path(city: 'miami'), method: :post, remote: true, class: "btn btn-primary" %>
+    <div class="btn-group btn-group-justified" role="group">
+      <div class="btn-group" role="group">
+        <%= link_to "Phoenix", pages_path(city: 'phoenix'), method: :post, remote: true, class: "btn btn-primary" %>
+      </div>
+      <div class="btn-group" role="group">  
+        <%= link_to "New York", pages_path(city: 'new york'), method: :post, remote: true, class: "btn btn-success" %>
+      </div>  
+      <div class="btn-group" role="group">  
+        <%= link_to "Los Angeles", pages_path(city: 'los angeles'), method: :post, remote: true, class: "btn btn-info" %>
+      </div>  
+      <div class="btn-group" role="group"> 
+        <%= link_to "Chicago", pages_path(city: 'chicago'), method: :post, remote: true, class: "btn btn-primary" %>
+      </div>  
+      <div class="btn-group" role="group">  
+        <%= link_to "San Francisco", pages_path(city: 'san francisco'), method: :post, remote: true, class: "btn btn-success" %>
+      </div>  
+      <div class="btn-group" role="group">  
+        <%= link_to "Austin", pages_path(city: 'austin'), method: :post, remote: true, class: "btn btn-info" %>
+      </div>  
+      <div class="btn-group" role="group">  
+        <%= link_to "Boston", pages_path(city: 'boston'), method: :post, remote: true, class: "btn btn-primary" %>
+      </div>    
+      <div class="btn-group" role="group">  
+        <%= link_to "Seattle", pages_path(city: 'seattle'), method: :post, remote: true, class: "btn btn-success" %>  
+      </div>  
+      <div class="btn-group" role="group">   
+        <%= link_to "Portland", pages_path(city: 'portland'), method: :post, remote: true, class: "btn btn-info" %>  
+      </div>  
+      <div class="btn-group" role="group">  
+        <%= link_to "Miami", pages_path(city: 'miami'), method: :post, remote: true, class: "btn btn-primary" %>
+      </div>  
 
-
+    </div>
     
     <div id="results">
     </div>

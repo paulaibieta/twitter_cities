@@ -1,5 +1,6 @@
-  <div class="col-md-6">
-    <div class="panel panel-warning">
+  <div class="col-md-8">
+    <div class="panel panel-success">
+
       <div class="panel-heading">
         <h3 class="panel-title">Most recent tweets with
           <% if query.include?("%23") %>
@@ -9,30 +10,32 @@
           <% end %>
         </h3>
       </div>  
+
         <div class="panel-body">
           <% tweets["statuses"].each do |tweet| %>
-            <br>
-            <%= tweet["text"] %>
-            <br>
-            tweeted by: <%= tweet["user"]["name"] %> (<%= tweet["user"]["screen_name"] %>)
-            <br>
+
+          <div class="media">
+
+            <div class="media-left">
               <% if tweet["entities"]["media"].present? %>
-              <%= image_tag tweet["entities"]["media"][0]["media_url"], size: "300x216" %>
-              <% end %><br>
-          <% end %>
-       
-        </div>  
+                <%= image_tag tweet["entities"]["media"][0]["media_url"], size: "150x108", class: "media-object" %>
+              <% end %>
+            </div> 
+
+            <div class="media-body">
+              <div class="media heading">
+                <h4><%= tweet["text"] %></h4>
+              </div>
+              <div class="text-warning text-right">
+                <em>tweeted by: <%= tweet["user"]["name"] %> (<%= tweet["user"]["screen_name"] %>)</em>
+              </div>  
+            </div>  
+
+          </div> 
+          
+          <% end %>  
+        </div> 
+
     </div>        
   </div>
-<!-- 
-  <div class="media">
-    <div class="media-left">
-      <a href="#">
-        <img class="media-object" src="..." alt="...">
-      </a>
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading">Media heading</h4>
-      ...
-    </div>
-  </div> -->
+
