@@ -1,7 +1,13 @@
   <div class="col-md-6">
-    <div class="panel panel-info">
+    <div class="panel panel-warning">
       <div class="panel-heading">
-        <h3 class="panel-title">Most recent local tweets with <%= query %></h3>
+        <h3 class="panel-title">Most recent tweets with
+          <% if query.include?("%23") %>
+            <%= query.gsub(/[%23+]/, "%" => "#", "23" => "", "+" => " ") %>
+          <% else %>
+            <%= query.gsub(/[%23#+]/, "%23#" => "", "+" => " ") %>    
+          <% end %>
+        </h3>
       </div>  
         <div class="panel-body">
           <% tweets["statuses"].each do |tweet| %>
@@ -18,3 +24,15 @@
         </div>  
     </div>        
   </div>
+<!-- 
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="..." alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Media heading</h4>
+      ...
+    </div>
+  </div> -->

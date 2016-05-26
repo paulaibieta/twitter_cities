@@ -1,7 +1,7 @@
 <div class="container">
   <div class="jumbotron">
     <h1>Urban Tweets</h1>
-    <p>Select your city to see the most popular trends in your area</p>
+    <p>Select your city to see the most popular Twitter trends in your area</p>
     
     <%= link_to "Phoenix", pages_path(city: 'phoenix'), method: :post, remote: true, class: "btn btn-primary" %>
     <%= link_to "New York", pages_path(city: 'new york'), method: :post, remote: true, class: "btn btn-primary" %>
@@ -14,11 +14,11 @@
     <%= link_to "Portland", pages_path(city: 'portland'), method: :post, remote: true, class: "btn btn-primary" %>  
     <%= link_to "Miami", pages_path(city: 'miami'), method: :post, remote: true, class: "btn btn-primary" %>
 
-    <br>
+
     
     <div id="results">
     </div>
-    <br>
+
     
   </div>
 </div>
